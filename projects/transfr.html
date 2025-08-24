@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfr - Sounak Ghosh Portfolio</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .project-hero {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%);
+            padding: 8rem 0 4rem;
+            text-align: center;
+        }
+        
+        .project-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .project-meta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+        }
+        
+        .project-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        .project-section {
+            margin-bottom: 3rem;
+        }
+        
+        .project-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .project-section p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        
+        .tech-stack {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+        }
+        
+        .tech-item {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">SG</span>
+                <span class="logo-subtitle">Reality Architect</span>
+            </div>
+            <div class="nav-links">
+                <a href="../index.html#intro" class="nav-link">Intro</a>
+                <a href="../index.html#skills" class="nav-link">Skills</a>
+                <a href="../index.html#projects" class="nav-link">Projects</a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+        <div class="container">
+            <a href="../index.html#projects" class="back-link">
+                <i class="fas fa-arrow-left"></i>
+                Back to Projects
+            </a>
+            <h1>Transfr</h1>
+            <div class="project-meta">
+                <div class="meta-item">
+                    <i class="fas fa-calendar"></i>
+                    <span>2023-2024</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-building"></i>
+                    <span>Transfr</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-users"></i>
+                    <span>Team Project</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <main class="project-content">
+        <div class="project-section">
+            <h2>Project Overview</h2>
+            <p>
+                Transfr is a leading VR training and simulation platform that revolutionizes career education 
+                through immersive virtual reality experiences. The platform enables users to learn and practice 
+                real-world skills in safe, controlled virtual environments.
+            </p>
+            <p>
+                As a Senior Technical Designer, I was responsible for building comprehensive design systems 
+                for XR interactions, developing Unity SDK tooling, and implementing AI automation to enhance 
+                the learning experience.
+            </p>
+        </div>
+
+        <div class="project-section">
+            <h2>Key Contributions</h2>
+            <div class="tech-stack">
+                <span class="tech-item">XR Design System</span>
+                <span class="tech-item">Unity SDK Development</span>
+                <span class="tech-item">AI Automation</span>
+                <span class="tech-item">VR Training Modules</span>
+                <span class="tech-item">Interaction Design</span>
+            </div>
+            
+            <h3>XR Design System</h3>
+            <p>
+                Developed a comprehensive design system for XR interactions that ensures consistency across 
+                all VR training modules. This system includes standardized interaction patterns, visual feedback 
+                mechanisms, and accessibility features that work seamlessly across different VR hardware.
+            </p>
+            
+            <h3>Unity SDK Tooling</h3>
+            <p>
+                Built custom Unity SDK tools that streamline the development process for VR training content. 
+                These tools include automated testing frameworks, performance optimization utilities, and 
+                content management systems that significantly reduce development time and improve quality.
+            </p>
+            
+            <h3>AI Automation</h3>
+            <p>
+                Implemented AI-driven automation systems that personalize training experiences based on user 
+                performance and learning patterns. This includes adaptive difficulty scaling, automated 
+                assessment tools, and intelligent content recommendations.
+            </p>
+        </div>
+
+        <div class="project-section">
+            <h2>Technical Challenges</h2>
+            <p>
+                One of the main challenges was creating a design system that could scale across multiple 
+                VR platforms while maintaining consistent user experience. This required deep understanding 
+                of VR hardware limitations and user interaction patterns.
+            </p>
+            <p>
+                Another significant challenge was developing AI automation that could accurately assess 
+                user performance in VR environments, requiring sophisticated computer vision and machine 
+                learning algorithms.
+            </p>
+        </div>
+
+        <div class="project-section">
+            <h2>Impact & Results</h2>
+            <p>
+                The XR design system reduced development time for new training modules by 40% while 
+                improving user engagement scores by 25%. The Unity SDK tools enabled content creators 
+                to build high-quality VR experiences more efficiently.
+            </p>
+            <p>
+                The AI automation features led to a 30% improvement in learning outcomes and reduced 
+                training time by an average of 20% across all modules.
+            </p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-logo">SG</span>
+                    <span class="footer-tagline">Reality Architect</span>
+                </div>
+                <div class="footer-links">
+                    <a href="../index.html#intro">Intro</a>
+                    <a href="../index.html#skills">Skills</a>
+                    <a href="../index.html#projects">Projects</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sounak Ghosh. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
