@@ -43,6 +43,12 @@ jobs:
         echo "Build completed"
         echo "Dist folder contents:"
         ls -la dist/
+        echo "Dist folder size: $(du -sh dist)"
+        echo "Checking for key files:"
+        if [ -f "dist/index.html" ]; then echo "✅ index.html exists"; else echo "❌ index.html missing"; fi
+        if [ -d "dist/assets" ]; then echo "✅ assets folder exists"; ls -la dist/assets/; else echo "❌ assets folder missing"; fi
+        echo "Full dist tree:"
+        find dist -type f -exec ls -la {} \;
         
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
