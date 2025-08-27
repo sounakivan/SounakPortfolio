@@ -19,14 +19,31 @@ jobs:
       with:
         node-version: '18'
         
+    - name: Debug Info
+      run: |
+        echo "Node version: $(node --version)"
+        echo "NPM version: $(npm --version)"
+        echo "Current directory: $(pwd)"
+        echo "Directory contents:"
+        ls -la
+        echo "Package.json contents:"
+        cat package.json
+        
     - name: Install dependencies
       run: |
         npm config set package-lock false
-        npm install --no-package-lock --no-audit --no-fund
-      
+        npm install --no-package-lock --no-audit --no-fund --verbose
+        echo "Dependencies installed successfully"
+        echo "Node modules size: $(du -sh node_modules)"
+        
     - name: Build
-      run: npm run build
-      
+      run: |
+        echo "Starting build..."
+        npm run build
+        echo "Build completed"
+        echo "Dist folder contents:"
+        ls -la dist/
+        
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       if: github.ref == 'refs/heads/main'
@@ -34,3 +51,5 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./dist
         force_orphan: true
+        user_name: 'github-actions[bot]'
+        user_email: 'github-actions[bot]@users.noreply.github.com'
